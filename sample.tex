@@ -1,106 +1,161 @@
-\documentclass{article}
-\usepackage{epsfig}
-\renewcommand{\baselinestretch}{1}
-\setlength{\textheight}{9in}
-\setlength{\textwidth}{6.5in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\topmargin}{0in}
-\setlength{\oddsidemargin}{0in}
-\setlength{\evensidemargin}{0in}
-\setlength{\parindent}{.3in}
+%%
+%% This is file `example.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% screenplay.dtx  (with options: `example')
+%% +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+%% 
+%% Authored by and Copyright (C)2006 by
+%% John Pate <johnny@dvc.org.uk>
+%% http://dvc.org.uk
+%% Latest version is available as:
+%% http://dvc.org.uk/sacrific.txt/screenplay.zip
+%% 
+%% This program is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of
+%% the License, or (at your option) any later version.
+%% 
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public
+%% License along with this program; if not, write to the Free
+%% Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+%% MA 02110-1301 USA
+%% 
+%% GPL v2 text also available as:
+%% http://dvc.org.uk/gplv2.txt
+%% 
+%% +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+%% \CheckSum{356}
+\documentclass{screenplay}[2012/06/30]
+
+\title{Example .tex File}
+
+\author{John Pate}
+
+\address{the address\\
+here if you're\\
+going postal\\
+UK\\
++44~(0)131~999~9999\\
+johnny@dvc.org.uk
+}
+
+%% ... preamble finished, let's go ...
 \begin{document}
 
-\leftline{Pat Q.~Student}
-\leftline{AME 20231}
-\leftline{16 January 2020}
+%% Make a title page ...
+\coverpage
+%% ...or use \nicholl
 
-\medskip
-This is a sample file in the text formatter \LaTeX.
-I require you to use it for the following reasons:
+%% TeX allows quite a lot of leeway in whitespace, so I've messed this
+%% up a bit.  I find keeping the format structured helps me a lot tho.
+%% Note: but don't have blank lines *inside* the body of text in
+%% a dialogue environment.
+%% I use vi (Elvis) with macros to make a lot of typing disappear.
+%% You can, of course, define LaTeX macros to shorten the command names.
+%%
+%% Anyhoo, on with the show ...
 
-\begin{itemize}
+%% for some reason this always happens at the start ...
+\fadein
 
-\item{It produces the best output of text, figures,
-      and equations of any
-      program I've seen.}
+\intslug[illumination]{example sample -- screenplay.cls}
 
-\item{It is machine-independent. It runs on Linux, Macintosh (see {\tt TeXShop}), and Windows (see {\tt MiKTeX}) machines.
-     You can e-mail {\tt ASCII} text versions of most relevant files.}
+In space, nobody knows what time of day it is.  Wait, there is no
+day.
 
-\item{It is the tool of choice for many research
-     scientists and engineers.
-     Many journals accept 
-     \LaTeX~ submissions, and many books
-     are written in \LaTeX.}
+So BOB, a cross-dressing Republican, and BROWN, a Christian
+fundamentalist Democrat, are talking nonsense instead.
 
-\end{itemize}
-\medskip
-Some basic instructions are given next.
-Put your text in here.  You can be a little sloppy    about
-spacing.  It adjusts the text to look good.
-{\small You can make the text smaller.}
-{\tiny You can make the text tiny.}
+\begin{dialogue}{Bob}
+That means that someone
+sabotaged the unit and killed the
+President! Was it one of us?
+\end{dialogue}
+\begin{dialogue}{Brown}
+Who else is mad but us, Condi\ldots
+ \paren{beat}
+and Bliar?
+\end{dialogue}
 
-Skip a line for a new paragraph.   
-You can use italics ({\em e.g.} {\em  Thermodynamics is everywhere}) or {\bf bold}.
-Greek letters are a snap: $\Psi$, $\psi$,
-$\Phi$, $\phi$.  Equations within text are easy---
-A well known Maxwell thermodynamic relation is
-$\left.{\partial T \over \partial P}\right|_{s} = 
-\left.{\partial v \over \partial s}\right|_{P}$.
-You can also set aside equations like so:
-\begin{eqnarray}
-du &=& T\ ds -P\ dv, \qquad \mbox{first law.}\label{fl}\\
-ds &\ge& {\delta q \over T}.\qquad  \qquad \mbox{second law.} \label{sl}
-\end{eqnarray}
-Eq.~(\ref{fl}) is the first law.
-Eq.~(\ref{sl}) is the second law.
-References\footnote{Lamport, L., 1986, {\em \LaTeX: User's Guide \& Reference Manual},
-    Addison-Wesley: Reading, Massachusetts.}
-are available. 
-If you have an postscript file, say {\tt sample.figure.eps}, in the same local directory,
-you can insert the file as a figure.  Figure \ref{sample}, below, plots an isotherm for air modeled as an ideal gas. 
-\begin{figure}[ht]
-\epsfxsize=2.5in
-\centerline{\epsffile{sample.figure.eps}}
-\caption{Sample figure plotting $T=300~{\rm K}$ isotherm for air when modeled as an ideal gas.}
-\label{sample}
-\end{figure}
+Bob buries his head in his hands.
 
-\medskip
-\leftline{\em Running \LaTeX}
-\medskip
+\intslug{Atlantis -- somewhere ANyway}
 
-You can create a \LaTeX~ file with any text editor ({\tt vi}, {\tt emacs}, {\tt gedit}, 
-etc.). 
-To get a document, you need to run the \LaTeX~ application
-on the text file.  The text file must have the suffix ``{\tt .tex}''
-On a Linux cluster machine, this is done via the command
+JOHN and MARK are at adjacent consoles. FRED is with them. TOM
+is at another console slightly further away.
 
-\medskip
-{\tt latex file.tex}
+\begin{dialogue}{John}
+The planetoid seems to have a thin crust
+covering a nickel-iron core. Could have
+been an Earth-like planet at one time.
+\end{dialogue}
 
-\medskip
-\noindent
-This generates three files: {\tt file.dvi}, {\tt file.aux},
-and {\tt file.log}.  The most important is {\tt file.dvi}. 
+\begin{dialogue}{Mark}
+We're coming up on the radio source now.
+\end{dialogue}
 
-\medskip
-\noindent
-The finished product can be previewed in the following way.
-Execute the commands:
+Brown walks in and goes to a console.
 
-\medskip
+He has a PARROT on his shoulder.
 
-{\tt dvipdf file.dvi}\hspace{1.9in}{\em Linux System}
+The Parrot has an air of quiet insouciance.
 
-\medskip
-\noindent
-This command generates {\tt file.pdf}.  
-Alternatively, you can use {\tt TeXShop} on a Macintosh or {\tt MiKTeX} on a Windows-based machine.
-The {\tt .tex} file must have a closing statement as
-below.
+\begin{dialogue}{Fred}
+Switch the visual to main screen so we
+can get a good look.\end{dialogue}
 
+They look up at the main screen.
+
+\begin{dialogue}[to John and Mark]{Fred}
+Lock on to that.
+\dialbreak[to Tom]{Fred}
+Establish planetary orbit.
+\end{dialogue}
+
+\intextslug[day]{in or out}
+Apparently some people do this.
+
+\intercut
+\extintslug[night]{out or in}
+Or even this.
+
+\extslug[day or nite]{NO WARRANTY -- EXPRESS OR IMPLIED}
+
+\pov\ I made the slugline DAY/NIGHT optional 'cause in space no-one can
+tell the time.  You probably will need to specify.
+
+Don't put in pagebreaks by hand until you're really, really
+finished editing!
+
+It isn't the done thing to hyphenate for formatting purposes.
+\centretitle{http://dvc.org.uk/sacrific.txt/}
+
+That was a centred titleover.
+\begin{titleover}There's a titleover environment for dialogue-like layout if you're
+doing the "Star Wars" thing.\end{titleover}\extslug[All Hail Discordia!]{where to find us}
+http://dvc.org.uk/sacrific.txt/screenplay.zip
+
+Use the source, Luke.
+
+\extslug[illumination]{for definitive info on layout}
+
+http://www.oscars.org/awards/nicholl/resources.html
+
+%% and this always happens at the end ...
+\fadeout
+
+\theend
 
 \end{document}
+%% 
+%% Hail Eris!  All Hail Discordia!
+%%
+%% End of file `example.tex'.
